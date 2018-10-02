@@ -13,6 +13,7 @@ describe DockingStation do
 
   it 'release bike' do
     docking_station = DockingStation.new
+    p docking_station.release_bike
     expect(docking_station.release_bike).to be_instance_of Bike
   end
 
