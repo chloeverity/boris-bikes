@@ -22,4 +22,15 @@ describe DockingStation do
     bike = docking_station.release_bike
     expect(bike.working?).to eq true
   end
+
+  it 'docking bike' do
+    docking_station = DockingStation.new
+    expect(docking_station).to respond_to(:dock_bike)
+  end
+
+  it 'docking bike with 1 argument' do
+    docking_station = DockingStation.new
+    expect(docking_station).to respond_to(:dock_bike).with(1).argument
+  end
+
 end
